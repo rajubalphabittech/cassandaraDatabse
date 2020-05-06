@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24874" started-at="2020-05-06T18:43:53 IST" finished-at="2020-05-06T18:44:18 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24874" started-at="2020-05-06T18:43:53 IST" finished-at="2020-05-06T18:44:18 IST">
+      <class name="StartCassandra">
+        <test-method status="PASS" signature="connect()[pri:0, instance:StartCassandra@50d0686]" name="connect" is-config="true" duration-ms="1088" started-at="2020-05-06T18:43:53 IST" finished-at="2020-05-06T18:43:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connect -->
+        <test-method status="PASS" signature="whenCreatingKeyspace()[pri:0, instance:StartCassandra@50d0686]" name="whenCreatingKeyspace" duration-ms="1495" started-at="2020-05-06T18:43:54 IST" finished-at="2020-05-06T18:43:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenCreatingKeyspace -->
+        <test-method status="PASS" signature="deletingKeyspace()[pri:0, instance:StartCassandra@50d0686]" name="deletingKeyspace" is-config="true" duration-ms="22251" started-at="2020-05-06T18:43:56 IST" finished-at="2020-05-06T18:44:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletingKeyspace -->
+      </class> <!-- StartCassandra -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
