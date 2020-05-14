@@ -1,8 +1,11 @@
-package com.database;
-import com.codahale.metrics.ConsoleReporter.Builder;
+package com.database.automation;
+
 import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.Host;
+import com.datastax.driver.core.Metadata;
 import com.datastax.driver.core.Session;
 import com.datastax.driver.core.SocketOptions;
+import com.datastax.driver.core.Cluster.Builder;
 
 public class cassandraConnector {
 
@@ -16,13 +19,18 @@ public class cassandraConnector {
 			.setTcpNoDelay(true);
 	
 	public void connect(String node,Integer port) {
-		com.datastax.driver.core.Cluster.Builder b = Cluster.builder().addContactPoint(node).withSocketOptions(options) ;
+		Builder b = Cluster.builder().addContactPoint(node).withSocketOptions(options) ;
 	
 		if(port!= null)
 			b.withPort(port);
 		
 		cluster =  b.withoutJMXReporting().build();
 		session = cluster.connect();
+		Metadata metadata = cluster.getMetadata();
+		System.out.printf("Connected to "+cluster.getClusterName());
+		
+		for(Host host : metadata.getAllHosts())
+			System.out.printf("\nDataCenter : %s; \nHost : %s; \nRack : %s\n",host.getDatacenter(),host.getAddress(),host.getRack());
 	}
 	
 	public Session getSession() {
@@ -33,5 +41,6 @@ public class cassandraConnector {
 		session.close();
 		cluster.close();
 	}
+	
 	
 }

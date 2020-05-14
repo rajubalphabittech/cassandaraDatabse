@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24874" started-at="2020-05-06T18:43:53 IST" finished-at="2020-05-06T18:44:18 IST">
+  <suite name="Default suite" duration-ms="40636" started-at="2020-05-14T17:54:03 IST" finished-at="2020-05-14T17:54:44 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24874" started-at="2020-05-06T18:43:53 IST" finished-at="2020-05-06T18:44:18 IST">
-      <class name="StartCassandra">
-        <test-method status="PASS" signature="connect()[pri:0, instance:StartCassandra@50d0686]" name="connect" is-config="true" duration-ms="1088" started-at="2020-05-06T18:43:53 IST" finished-at="2020-05-06T18:43:54 IST">
+    <test name="Default test" duration-ms="40636" started-at="2020-05-14T17:54:03 IST" finished-at="2020-05-14T17:54:44 IST">
+      <class name="com.casandradatabase.test.StartCassandra">
+        <test-method status="PASS" signature="connect()[pri:0, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="connect" is-config="true" duration-ms="1221" started-at="2020-05-14T17:54:03 IST" finished-at="2020-05-14T17:54:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- connect -->
-        <test-method status="PASS" signature="whenCreatingKeyspace()[pri:0, instance:StartCassandra@50d0686]" name="whenCreatingKeyspace" duration-ms="1495" started-at="2020-05-06T18:43:54 IST" finished-at="2020-05-06T18:43:56 IST">
+        <test-method status="PASS" signature="whenCreatingKeyspace()[pri:1, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="whenCreatingKeyspace" duration-ms="4582" started-at="2020-05-14T17:54:04 IST" finished-at="2020-05-14T17:54:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- whenCreatingKeyspace -->
-        <test-method status="PASS" signature="deletingKeyspace()[pri:0, instance:StartCassandra@50d0686]" name="deletingKeyspace" is-config="true" duration-ms="22251" started-at="2020-05-06T18:43:56 IST" finished-at="2020-05-06T18:44:18 IST">
+        <test-method status="PASS" signature="creatingTable()[pri:2, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="creatingTable" duration-ms="3218" started-at="2020-05-14T17:54:09 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.whenCreatingKeyspace" finished-at="2020-05-14T17:54:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- creatingTable -->
+        <test-method status="PASS" signature="insertData()[pri:3, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="insertData" duration-ms="15" started-at="2020-05-14T17:54:12 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-14T17:54:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertData -->
+        <test-method status="PASS" signature="displayTableData()[pri:4, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="displayTableData" duration-ms="7" started-at="2020-05-14T17:54:12 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-14T17:54:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayTableData -->
+        <test-method status="PASS" signature="dropTable()[pri:5, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="dropTable" duration-ms="11702" started-at="2020-05-14T17:54:12 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-14T17:54:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropTable -->
+        <test-method status="PASS" signature="deletingKeyspace()[pri:0, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="deletingKeyspace" is-config="true" duration-ms="19836" started-at="2020-05-14T17:54:24 IST" finished-at="2020-05-14T17:54:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletingKeyspace -->
-      </class> <!-- StartCassandra -->
+      </class> <!-- com.casandradatabase.test.StartCassandra -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

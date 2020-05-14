@@ -1,5 +1,9 @@
-package com.database;
+package com.database.automation;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Session;
 
 public class KeyspaceRepository {
@@ -9,6 +13,7 @@ public class KeyspaceRepository {
 		
 		this.session=session;
 	}
+	
 
 	public void createKeyspace(String keyspaceName,String replicationStrategy,int replicationFactor)
 	{
@@ -33,4 +38,25 @@ public class KeyspaceRepository {
 		session.execute(query);
 	}
 	
+	public boolean showAllKeysapce(String keyspaceName)	{
+		
+	
+		ResultSet result = session.execute("SELECT * FROM system_schema.keyspaces;");
+		
+		List<String> keyspacesList = result.all() .stream().map(r -> r.getString(0)).collect(Collectors.toList());
+		
+		java.util.Iterator<String> iterator = keyspacesList.iterator();
+		
+		Boolean bool=false ;
+		while(iterator.hasNext()) {
+			
+			String list =  iterator.next();
+			System.out.println(list);
+			if(keyspaceName.equalsIgnoreCase(list)) {
+				   bool = true;
+		    }
+					
+	    }
+		return bool;
+   }
 }
