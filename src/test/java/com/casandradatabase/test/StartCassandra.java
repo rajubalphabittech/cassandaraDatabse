@@ -37,13 +37,24 @@ public class StartCassandra {
 	@Test(priority = 1)
 	public void whenCreatingKeyspace() {		
 		System.out.println("============create keyspace====================");
-		schema.createKeyspace(keyspaceName, replicationStrategy, replicationFactor);
+//		schema.createKeyspace(keyspaceName, replicationStrategy, replicationFactor);
+		
+		StringBuilder sb = new StringBuilder("CREATE KEYSPACE ")
+				.append(keyspaceName)
+				.append(" with replication = {")
+				.append("'class':'").append(replicationStrategy)
+				.append("','replication_factor':").append(replicationFactor)
+				.append("};");
+		
+		String query =sb.toString();
+		System.out.println(query);
+		session.execute(query);
 				
 		System.out.println("-------------list of keysapces-------------------");
 		
         ResultSet result = session.execute("SELECT * FROM system_schema.keyspaces;");
 		
-		List<String> keyspacesList = result.all() .stream().map(r -> r.getString(0)).collect(Collectors.toList());
+		List<String> keyspacesList = result.all().stream().map(r -> r.getString(0)).collect(Collectors.toList());
 		
 		java.util.Iterator<String> iterator = keyspacesList.iterator();
 		
@@ -57,6 +68,7 @@ public class StartCassandra {
 		    }
 					
 	    }
+		
 //		boolean bool = schema.showAllKeysapce(keyspaceName);
 		Assert.assertTrue(bool);
 	}

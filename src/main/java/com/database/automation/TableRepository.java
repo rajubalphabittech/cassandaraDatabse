@@ -76,7 +76,7 @@ public class TableRepository {
 	{
 		System.out.println("------------------Delete table--------------------");
 		StringBuilder sb = new StringBuilder("DROP TABLE IF EXISTS ")
-				.append(keyspaceName +"."+ tableName);
+				               .append(keyspaceName +"."+ tableName);
 		
 		ExecuteQuery.run(session, sb);
 	}

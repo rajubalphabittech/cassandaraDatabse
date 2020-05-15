@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40636" started-at="2020-05-14T17:54:03 IST" finished-at="2020-05-14T17:54:44 IST">
+  <suite name="Default suite" duration-ms="43244" started-at="2020-05-15T16:45:11 IST" finished-at="2020-05-15T16:45:54 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40636" started-at="2020-05-14T17:54:03 IST" finished-at="2020-05-14T17:54:44 IST">
+    <test name="Default test" duration-ms="43244" started-at="2020-05-15T16:45:11 IST" finished-at="2020-05-15T16:45:54 IST">
       <class name="com.casandradatabase.test.StartCassandra">
-        <test-method status="PASS" signature="connect()[pri:0, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="connect" is-config="true" duration-ms="1221" started-at="2020-05-14T17:54:03 IST" finished-at="2020-05-14T17:54:04 IST">
+        <test-method status="PASS" signature="connect()[pri:0, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="connect" is-config="true" duration-ms="1311" started-at="2020-05-15T16:45:11 IST" finished-at="2020-05-15T16:45:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- connect -->
-        <test-method status="PASS" signature="whenCreatingKeyspace()[pri:1, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="whenCreatingKeyspace" duration-ms="4582" started-at="2020-05-14T17:54:04 IST" finished-at="2020-05-14T17:54:09 IST">
+        <test-method status="PASS" signature="whenCreatingKeyspace()[pri:1, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="whenCreatingKeyspace" duration-ms="610" started-at="2020-05-15T16:45:12 IST" finished-at="2020-05-15T16:45:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- whenCreatingKeyspace -->
-        <test-method status="PASS" signature="creatingTable()[pri:2, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="creatingTable" duration-ms="3218" started-at="2020-05-14T17:54:09 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.whenCreatingKeyspace" finished-at="2020-05-14T17:54:12 IST">
+        <test-method status="PASS" signature="creatingTable()[pri:2, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="creatingTable" duration-ms="2537" started-at="2020-05-15T16:45:13 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.whenCreatingKeyspace" finished-at="2020-05-15T16:45:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatingTable -->
-        <test-method status="PASS" signature="insertData()[pri:3, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="insertData" duration-ms="15" started-at="2020-05-14T17:54:12 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-14T17:54:12 IST">
+        <test-method status="PASS" signature="insertData()[pri:3, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="insertData" duration-ms="26" started-at="2020-05-15T16:45:15 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-15T16:45:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- insertData -->
-        <test-method status="PASS" signature="displayTableData()[pri:4, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="displayTableData" duration-ms="7" started-at="2020-05-14T17:54:12 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-14T17:54:12 IST">
+        <test-method status="PASS" signature="displayTableData()[pri:4, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="displayTableData" duration-ms="19" started-at="2020-05-15T16:45:16 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-15T16:45:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- displayTableData -->
-        <test-method status="PASS" signature="dropTable()[pri:5, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="dropTable" duration-ms="11702" started-at="2020-05-14T17:54:12 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-14T17:54:24 IST">
+        <test-method status="PASS" signature="dropTable()[pri:5, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="dropTable" duration-ms="14176" started-at="2020-05-15T16:45:16 IST" depends-on-methods="com.casandradatabase.test.StartCassandra.creatingTable" finished-at="2020-05-15T16:45:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropTable -->
-        <test-method status="PASS" signature="deletingKeyspace()[pri:0, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="deletingKeyspace" is-config="true" duration-ms="19836" started-at="2020-05-14T17:54:24 IST" finished-at="2020-05-14T17:54:44 IST">
+        <test-method status="PASS" signature="deletingKeyspace()[pri:0, instance:com.casandradatabase.test.StartCassandra@1e7c7811]" name="deletingKeyspace" is-config="true" duration-ms="24504" started-at="2020-05-15T16:45:30 IST" finished-at="2020-05-15T16:45:54 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletingKeyspace -->
